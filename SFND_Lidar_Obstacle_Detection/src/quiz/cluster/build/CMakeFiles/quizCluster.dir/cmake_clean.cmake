@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/quizCluster.dir/cluster.cpp.o"
-  "CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
+  "CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
   "quizCluster.pdb"
   "quizCluster"
 )

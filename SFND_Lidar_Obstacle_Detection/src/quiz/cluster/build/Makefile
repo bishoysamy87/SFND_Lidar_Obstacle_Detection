@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
+CMAKE_SOURCE_DIR = /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+CMAKE_BINARY_DIR = /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,32 +150,32 @@ cluster.cpp.s:
 	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/cluster.cpp.s
 .PHONY : cluster.cpp.s
 
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.o: home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.o: home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
 
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.o
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.o
 
 # target to build an object file
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
 
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.i: home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.i: home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
 
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.i
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.i
 
 # target to preprocess a source file
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
 
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.s: home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.s: home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
 
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.s
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.s
 
 # target to generate assembly for a file
-home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s:
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
-.PHONY : home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s:
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+.PHONY : home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... cluster.o"
 	@echo "... cluster.i"
 	@echo "... cluster.s"
-	@echo "... home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.o"
-	@echo "... home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.i"
-	@echo "... home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.s"
+	@echo "... home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.o"
+	@echo "... home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.i"
+	@echo "... home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.s"
 .PHONY : help
 
 

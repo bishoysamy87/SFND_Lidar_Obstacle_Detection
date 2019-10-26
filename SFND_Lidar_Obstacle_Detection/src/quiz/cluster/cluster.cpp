@@ -31,7 +31,8 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr CreateData(std::vector<std::vector<float>> p
   		pcl::PointXYZ point;
   		point.x = points[i][0];
   		point.y = points[i][1];
-  		point.z = 0;
+  		point.z = points[i][2];
+		//std::cout<<points[i][2]<<std::endl;
 
   		cloud->points.push_back(point);
 
@@ -135,23 +136,26 @@ int main ()
   	window.x_max =  10;
   	window.y_min = -10;
   	window.y_max =  10;
-  	window.z_min =   0;
-  	window.z_max =   0;
-	pcl::visualization::PCLVisualizer::Ptr viewer = initScene(window, 25);
+  	window.z_min =  300;
+  	window.z_max =   -300;
+	pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
+	viewer->setCameraPosition(-16, -16, 16, 1, 1, 0);
+	viewer->addCoordinateSystem (1.0);
 
 	// Create data
-	std::vector<std::vector<float>> points = { {-6.2,7}, {-6.3,8.4}, {-5.2,7.1}, {-5.7,6.3}, {7.2,6.1}, {8.0,5.3}, {7.2,7.1}, {0.2,-7.1}, {1.7,-6.9}, {-1.2,-7.2}, {2.2,-8.9} };
+	std::vector<std::vector<float>> points = { {-6.2,7,10}, {-6.3,8.4,5}, {-5.2,7.1,100.5}, {-5.7,6.3,-10}, {7.2,6.1,-3}, {8.0,5.3,-1}, {7.2,7.1,-2}, {0.2,-7.1,2}, {1.7,-6.9,3}, {-1.2,-7.2,4}, {2.2,-8.9,4} };
 	//std::vector<std::vector<float>> points = { {-6.2,7}, {-6.3,8.4}, {-5.2,7.1}, {-5.7,6.3} };
 	//std::vector<std::vector<float>> points = { {-6.2,7},{-6.3,8.4}};
 	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = CreateData(points);
 
 	KdTree* tree = new KdTree;
+	tree->point_dim = 3;
   
     for (int i=0; i<points.size(); i++) 
     	tree->insert(points[i],i); 
 
   	int it = 0;
-  	render2DTree(tree->root,viewer,window, it);
+  	//render2DTree(tree->root,viewer,window, it);
   
   	std::cout << "Test Search" << std::endl;
   	std::vector<int> nearby = tree->search(points[4],3.0);
@@ -175,7 +179,7 @@ int main ()
   	{
   		pcl::PointCloud<pcl::PointXYZ>::Ptr clusterCloud(new pcl::PointCloud<pcl::PointXYZ>());
   		for(int indice: cluster)
-  			clusterCloud->points.push_back(pcl::PointXYZ(points[indice][0],points[indice][1],0));
+  			clusterCloud->points.push_back(pcl::PointXYZ(points[indice][0],points[indice][1],points[indice][2]));
   		renderPointCloud(viewer, clusterCloud,"cluster"+std::to_string(clusterId),colors[clusterId%3]);
   		++clusterId;
   	}

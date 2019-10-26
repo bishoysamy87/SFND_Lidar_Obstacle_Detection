@@ -1,6 +1,8 @@
 // PCL lib Functions for processing point clouds 
 
 #include "processPointClouds.h"
+#include <Eigen/Dense>
+using namespace Eigen;
 
 
 //constructor:
@@ -179,6 +181,110 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
     return clusters;
 }
 
+template<typename PointT>
+void ProcessPointClouds<PointT>::Proximity(typename pcl::PointCloud<PointT>::Ptr cloud,
+			   std::vector<int>& is_processed,
+			   KdTree<PointT> * tree,
+			   float distanceTol,
+			   int id,
+			   std::vector<int>& cluster,int minSize, int maxSize)
+{
+	if(cluster.size()<maxSize && (is_processed[id] == 0))
+	{
+		is_processed[id] = 1;
+		/**add this point to the cluster*/
+		cluster.push_back(id);
+	}
+	else
+	{
+		std::cout<< "exceedt the maximum size"<<std::endl;
+	}
+	std::vector<int> nearby = tree->search(cloud->points[id],distanceTol);
+	//std::cout<< "size of nearby = "<< nearby.size() << std::endl;
+	
+	for(int index : nearby)
+	{
+		//std::cout << index << ",";
+		if(is_processed[index] == 0)
+		{
+			//std::cout<<"point = "<<index<<std::endl;
+			Proximity(cloud, is_processed,tree ,distanceTol,index,cluster,minSize,maxSize);
+		}
+	}
+	//std::cout << std::endl;
+}
+
+template<typename PointT>
+std::vector<std::vector<int>> ProcessPointClouds<PointT>::euclideanCluster(typename pcl::PointCloud<PointT>::Ptr cloud, KdTree<PointT>* tree, float distanceTol,int minSize, int maxSize)
+{
+
+	// TODO: Fill out this function to return list of indices for each cluster
+
+	std::vector<std::vector<int>> clusters;
+	std::vector<int> is_processed;
+	
+	is_processed.assign(cloud->points.size(),0);
+	//std::cout<<"cloud size =  "<<cloud->points.size()<<std::endl;
+	int num_clusters = 0;
+	for (int itr = 0; itr < cloud->points.size(); itr++)
+	{
+		if(is_processed[itr] == 0)
+		{
+			//std::cout<<"point = "<<itr<<std::endl;
+			std::vector<int> cluster;
+			Proximity(cloud,is_processed,tree,distanceTol,itr,cluster,minSize,maxSize);
+			num_clusters++;
+			clusters.push_back(cluster);
+			//std::cout<<"cluster added = "<<num_clusters<<std::endl;
+		}
+	}
+ 
+	return clusters;
+
+}
+
+
+template<typename PointT>
+std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::Clustering2(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize, int maxSize)
+{
+
+    // Time clustering process
+    auto startTime = std::chrono::steady_clock::now();
+
+    std::vector<typename pcl::PointCloud<PointT>::Ptr> clusters;
+
+    // TODO:: Fill in the function to perform euclidean clustering to group detected obstacles
+	KdTree<PointT>* tree= new KdTree<PointT>  ;
+	tree->point_dim = 3;
+	
+	for(int id= 0; id< cloud->points.size();id++)
+	{
+		tree->insert (cloud->points[id],id);
+	}
+	
+	
+	std::vector<std::vector<int>> clusters_index = euclideanCluster(cloud, tree, clusterTolerance,minSize, maxSize);
+	
+	for(std::vector<int> cluster : clusters_index)
+  	{
+		if(cluster.size() < minSize || cluster.size() > maxSize)
+			continue;
+  		typename pcl::PointCloud<PointT>::Ptr cloud_cluster ( new pcl::PointCloud<PointT>);
+		//std::cout<<"cluster num points = "<< cluster.size()<<std::endl;
+  		for(int indice: cluster)
+  			cloud_cluster->points.push_back(cloud->points[indice]);
+		cloud_cluster->width = cloud_cluster->points.size ();
+		cloud_cluster->height = 1;
+		cloud_cluster->is_dense = true;
+		clusters.push_back(cloud_cluster);
+  	}
+
+    auto endTime = std::chrono::steady_clock::now();
+    auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+    std::cout << "clustering took " << elapsedTime.count() << " milliseconds and found " << clusters.size() << " clusters" << std::endl;
+
+    return clusters;
+}
 
 template<typename PointT>
 Box ProcessPointClouds<PointT>::BoundingBox(typename pcl::PointCloud<PointT>::Ptr cluster)
@@ -316,12 +422,16 @@ std::unordered_set<int> ProcessPointClouds<PointT>::Ransac(typename pcl::PointCl
 		double y3 = cloud->points[idx3].y;
 		double x3 = cloud->points[idx3].x;
 		double z3 = cloud->points[idx3].z;
+		Vector3d v((x2-x1),(y2-y1),(z2-z1));
+        Vector3d w((x3-x1),(y3-y1),(z3-z1));
 		
+		Vector3d res = v.cross(w);
+	
 		
-		double A = ((y2-y1)*(z3-z1))- ((z2-z1)*(y3-y1));
-		double B = ((z2-z1)*(x3-x1))- ((x2-x1)*(z3-z1));
+		double A = res[0];
+		double B = res[1];
 		
-		double C = ((x2-x1)*(y3-y1))- ((y2-y1)*(x3-x1));
+		double C = res[2];
 		double D = -(A*x1+B*y1+C*z1);
 		
 		//cout<<"A = "<<A<<" B = " << B<<" C= " << C << std::endl;
@@ -330,7 +440,7 @@ std::unordered_set<int> ProcessPointClouds<PointT>::Ransac(typename pcl::PointCl
 		for (int pts = 0; pts < cloud->points.size(); pts++)
 		{
 			
-			double d = abs(A * cloud->points[pts].x + B*cloud->points[pts].y + C * cloud->points[pts].z + D) / den;
+			double d = fabs(A * cloud->points[pts].x + B*cloud->points[pts].y + C * cloud->points[pts].z + D) / den;
 			if(d < distanceTol)
 			{
 				num_inliners++;

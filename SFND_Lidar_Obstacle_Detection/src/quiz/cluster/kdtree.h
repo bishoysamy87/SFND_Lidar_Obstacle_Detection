@@ -22,6 +22,7 @@ struct KdTree
 {
 	Node* root;
 	int depth;
+	int point_dim = 2;
 	int current_depth = 0;
 
 	KdTree()
@@ -40,7 +41,7 @@ struct KdTree
 		else
 		{
 			
-			if((*node_ptr)->point[(depth & 1)]< point[(depth & 1)])
+			if((*node_ptr)->point[(depth % point_dim)]< point[(depth % point_dim)])
 			{
 				depth++;
 				getNode(&((*node_ptr)->right),point,id);
@@ -74,14 +75,15 @@ struct KdTree
 	{
 		float diffx = target[0] - point[0];
 		float diffy = target[1] - point[1];
-		return(sqrt(diffx*diffx + diffy*diffy));
+		float diffz = target[2] - point[2];
+		return(sqrt(diffx*diffx + diffy*diffy + diffz*diffz));
 	}
 	
 	Node * getNextNode(Node * node,std::vector<float> point)
 	{
 		Node * note_ptr;
 
-		if(node->point[(depth & 1)]< point[(depth & 1)])
+		if(node->point[(depth % point_dim)]< point[(depth % point_dim)])
 		{
 			depth++;
 			note_ptr = node->right;
@@ -102,13 +104,13 @@ struct KdTree
 			{
 				ids.push_back(node->id);			   
 			}
-			if(node->point[(depth & 1)]>= (point[(depth & 1)]- distanceTol))
+			if(node->point[(depth % point_dim)]>= (point[(depth % point_dim)]- distanceTol))
 			{
 				depth++;
 				searchTree(node->left,point,distanceTol,ids);
 				//ids.insert(ids.end(),std::make_move_iterator(temp_ids.begin()),std::make_move_iterator(temp_ids.end()));
 			}
-			if(node->point[(depth & 1)] <= (point[(depth & 1)] + distanceTol))
+			if(node->point[(depth % point_dim)] <= (point[(depth % point_dim)] + distanceTol))
 			{
 				depth++;
 				searchTree(node->right,point,distanceTol,ids);

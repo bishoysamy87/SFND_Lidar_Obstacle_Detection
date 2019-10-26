@@ -6,35 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
 ../../render/render.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.h
 ../../render/box.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/box.h
 chrono
 -
 string
 -
 kdtree.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
 
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h
 ../../render/render.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.h
 
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/box.h
 Eigen/Geometry
 -
+Eigen/Eigenvalues
+-
 
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
 render.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.h
 
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.h
 pcl/visualization/pcl_visualizer.h
 -
 box.h
-/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/box.h
+/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/box.h
 iostream
 -
 vector

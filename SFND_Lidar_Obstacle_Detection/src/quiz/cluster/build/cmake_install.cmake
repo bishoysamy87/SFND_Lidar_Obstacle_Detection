@@ -1,4 +1,4 @@
-# Install script for directory: /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
+# Install script for directory: /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
+CMAKE_SOURCE_DIR = /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+CMAKE_BINARY_DIR = /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/quizCluster.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/quizCluster.dir/flags.make
 
 CMakeFiles/quizCluster.dir/cluster.cpp.o: CMakeFiles/quizCluster.dir/flags.make
 CMakeFiles/quizCluster.dir/cluster.cpp.o: ../cluster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/quizCluster.dir/cluster.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/quizCluster.dir/cluster.cpp.o -c /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/quizCluster.dir/cluster.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/quizCluster.dir/cluster.cpp.o -c /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp
 
 CMakeFiles/quizCluster.dir/cluster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quizCluster.dir/cluster.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp > CMakeFiles/quizCluster.dir/cluster.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp > CMakeFiles/quizCluster.dir/cluster.cpp.i
 
 CMakeFiles/quizCluster.dir/cluster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quizCluster.dir/cluster.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp -o CMakeFiles/quizCluster.dir/cluster.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp -o CMakeFiles/quizCluster.dir/cluster.cpp.s
 
 CMakeFiles/quizCluster.dir/cluster.cpp.o.requires:
 
@@ -81,40 +81,40 @@ CMakeFiles/quizCluster.dir/cluster.cpp.o.provides: CMakeFiles/quizCluster.dir/cl
 CMakeFiles/quizCluster.dir/cluster.cpp.o.provides.build: CMakeFiles/quizCluster.dir/cluster.cpp.o
 
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o: CMakeFiles/quizCluster.dir/flags.make
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o: /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o -c /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o: CMakeFiles/quizCluster.dir/flags.make
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o: /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o -c /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp > CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp > CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.i
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp -o CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp -o CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.s
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires:
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires:
 
-.PHONY : CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
+.PHONY : CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides: CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
-	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides.build
-.PHONY : CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides: CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
+	$(MAKE) -f CMakeFiles/quizCluster.dir/build.make CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides.build
+.PHONY : CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides
 
-CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides.build: CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.provides.build: CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
 
 
 # Object files for target quizCluster
 quizCluster_OBJECTS = \
 "CMakeFiles/quizCluster.dir/cluster.cpp.o" \
-"CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
+"CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o"
 
 # External object files for target quizCluster
 quizCluster_EXTERNAL_OBJECTS =
 
 quizCluster: CMakeFiles/quizCluster.dir/cluster.cpp.o
-quizCluster: CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
+quizCluster: CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o
 quizCluster: CMakeFiles/quizCluster.dir/build.make
 quizCluster: /usr/lib/x86_64-linux-gnu/libboost_system.so
 quizCluster: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -386,7 +386,7 @@ quizCluster: /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-6.2.so.6.2.0
 quizCluster: /usr/lib/x86_64-linux-gnu/libvtkmetaio-6.2.so.6.2.0
 quizCluster: /usr/lib/x86_64-linux-gnu/libz.so
 quizCluster: CMakeFiles/quizCluster.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable quizCluster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable quizCluster"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/quizCluster.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -395,7 +395,7 @@ CMakeFiles/quizCluster.dir/build: quizCluster
 .PHONY : CMakeFiles/quizCluster.dir/build
 
 CMakeFiles/quizCluster.dir/requires: CMakeFiles/quizCluster.dir/cluster.cpp.o.requires
-CMakeFiles/quizCluster.dir/requires: CMakeFiles/quizCluster.dir/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
+CMakeFiles/quizCluster.dir/requires: CMakeFiles/quizCluster.dir/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/render/render.cpp.o.requires
 
 .PHONY : CMakeFiles/quizCluster.dir/requires
 
@@ -404,6 +404,6 @@ CMakeFiles/quizCluster.dir/clean:
 .PHONY : CMakeFiles/quizCluster.dir/clean
 
 CMakeFiles/quizCluster.dir/depend:
-	cd /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/quizCluster.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/quizCluster.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/quizCluster.dir/depend
 

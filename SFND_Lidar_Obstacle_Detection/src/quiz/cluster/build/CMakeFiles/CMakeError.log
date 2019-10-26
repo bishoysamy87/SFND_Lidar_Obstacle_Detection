@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5a99d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5a99d.dir/build.make CMakeFiles/cmTC_5a99d.dir/build
-make[1]: Entering directory '/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5a99d.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_5a99d.dir/CheckSymbolExists.c.o   -c /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5a99d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a99d.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_5a99d.dir/CheckSymbolExists.c.o  -o cmTC_5a99d -rdynamic 
-CMakeFiles/cmTC_5a99d.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_fc8d2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fc8d2.dir/build.make CMakeFiles/cmTC_fc8d2.dir/build
+make[1]: Entering directory '/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc8d2.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fc8d2.dir/CheckSymbolExists.c.o   -c /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fc8d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc8d2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fc8d2.dir/CheckSymbolExists.c.o  -o cmTC_fc8d2 -rdynamic 
+CMakeFiles/cmTC_fc8d2.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5a99d.dir/build.make:97: recipe for target 'cmTC_5a99d' failed
-make[1]: *** [cmTC_5a99d] Error 1
-make[1]: Leaving directory '/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5a99d/fast' failed
-make: *** [cmTC_5a99d/fast] Error 2
+CMakeFiles/cmTC_fc8d2.dir/build.make:97: recipe for target 'cmTC_fc8d2' failed
+make[1]: *** [cmTC_fc8d2] Error 1
+make[1]: Leaving directory '/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fc8d2/fast' failed
+make: *** [cmTC_fc8d2/fast] Error 2
 
-File /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c73aa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c73aa.dir/build.make CMakeFiles/cmTC_c73aa.dir/build
-make[1]: Entering directory '/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c73aa.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c73aa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c73aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c73aa.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c73aa.dir/CheckFunctionExists.c.o  -o cmTC_c73aa -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_71dfa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71dfa.dir/build.make CMakeFiles/cmTC_71dfa.dir/build
+make[1]: Entering directory '/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71dfa.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_71dfa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71dfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71dfa.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_71dfa.dir/CheckFunctionExists.c.o  -o cmTC_71dfa -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c73aa.dir/build.make:97: recipe for target 'cmTC_c73aa' failed
-make[1]: *** [cmTC_c73aa] Error 1
-make[1]: Leaving directory '/home/bishoy/udacity_sensor_fusion/lidar/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_c73aa/fast' failed
-make: *** [cmTC_c73aa/fast] Error 2
+CMakeFiles/cmTC_71dfa.dir/build.make:97: recipe for target 'cmTC_71dfa' failed
+make[1]: *** [cmTC_71dfa] Error 1
+make[1]: Leaving directory '/home/bishoy/github/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_71dfa/fast' failed
+make: *** [cmTC_71dfa/fast] Error 2
 
 
