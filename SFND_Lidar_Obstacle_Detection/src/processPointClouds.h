@@ -51,15 +51,10 @@ struct KdTree
 		if((*node_ptr) == NULL)
 		{
 			(*node_ptr) = new Node(point,id);
-			//std::cout<< "The point = "<<point[0]<<","<< point[1]<<std::endl;
-			//std::cout<< "The depth = "<<depth<<std::endl;
-			//std::cout<< "The depth = "<<id<<std::endl;
+
 		}
 		else
 		{
-		//	getNode(&((*node_ptr)->right),point,id);
-			//std::cout<< "The depth = "<<(depth % point_dim)<<std::endl;
-			
 			if((*node_ptr)->point[(depth % point_dim)]< point[(depth % point_dim)])
 			{
 				depth++;
@@ -78,8 +73,6 @@ struct KdTree
 	void insert(PointT po, int id)
 	{
 		std::vector<double> point = {po.x,po.y,po.z};
-		// TODO: Fill in this function to insert a new point into the tree
-		// the function should create a new node and place correctly with in the root 
 		depth = 0;
 		if(root == NULL)
 		{
@@ -129,24 +122,14 @@ struct KdTree
 			{
 				ids.push_back(node->id);			   
 			}
-			//else
-			//{
-				//std::cout<<"dist = "<< dist << std::endl;
-				//std::cout<<"point = "<< point[0] << "," << point[1] << "," << point[2] << std::endl;
-				//std::cout<<"node_point = "<< node->point[0] << "," << node->point[1] << "," << node->point[2] << std::endl;
-			//}
-			//searchTree(node->right,point,distanceTol,ids,dep++);
+
 			if(node->point[(dep % point_dim)]> (point[(dep % point_dim)]- distanceTol))
 			{
-				//dep++;
 				searchTree(node->left,point,distanceTol,ids,dep+1);
-				//ids.insert(ids.end(),std::make_move_iterator(temp_ids.begin()),std::make_move_iterator(temp_ids.end()));
 			}
 			if(node->point[(dep % point_dim)] < (point[(dep % point_dim)] + distanceTol))
 			{
-				//dep++;
 				searchTree(node->right,point,distanceTol,ids,dep+1);
-				//ids.insert(ids.end(),std::make_move_iterator(temp_ids.begin()),std::make_move_iterator(temp_ids.end()));
 			}
 			
 		}
@@ -191,12 +174,7 @@ public:
 
     typename pcl::PointCloud<PointT>::Ptr FilterCloud(typename pcl::PointCloud<PointT>::Ptr cloud, float filterRes, Eigen::Vector4f minPoint, Eigen::Vector4f maxPoint);
 
-    std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SeparateClouds(pcl::PointIndices::Ptr inliers, typename pcl::PointCloud<PointT>::Ptr cloud);
-
-    std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SegmentPlane(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceThreshold);
-
     std::vector<typename pcl::PointCloud<PointT>::Ptr> Clustering(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize, int maxSize);
-	std::vector<typename pcl::PointCloud<PointT>::Ptr> Clustering2(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize, int maxSize);
 
     Box BoundingBox(typename pcl::PointCloud<PointT>::Ptr cluster);
 	
@@ -208,9 +186,9 @@ public:
 
     std::vector<boost::filesystem::path> streamPcd(std::string dataPath);
 	std::unordered_set<int> Ransac(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceTol);
-	std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SeparateClouds2(std::unordered_set<int> inliers, typename pcl::PointCloud<PointT>::Ptr cloud);
+	std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SeparateClouds(std::unordered_set<int> inliers, typename pcl::PointCloud<PointT>::Ptr cloud);
 
-    std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SegmentPlane2(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceThreshold);
+    std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> SegmentPlane(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceThreshold);
 	std::vector<std::vector<int>> euclideanCluster(typename pcl::PointCloud<PointT>::Ptr cloud, KdTree<PointT> * tree, float distanceTol,int minSize, int maxSize);
 	void Proximity(typename pcl::PointCloud<PointT>::Ptr cloud,
 			   std::vector<int>& is_processed,
